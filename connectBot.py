@@ -177,7 +177,7 @@ def main():
                     profile_url = link_element.get_attribute('href')
                     person_name = ""
                     try:
-                        title_element = person.find_element(By.XPATH, '//span[@dir="ltr"]//span[@aria-hidden="true"]')
+                        title_element = person.find_element(By.XPATH, './/span[@dir="ltr"]//span[@aria-hidden="true"]')
                         person_name = title_element.text.split("\n")[0]
                         if "1st" in title_element.text.lower():
                             print_lg(f'Skipping "{person_name}", Profile URL: {profile_url}. Is already a connection')
